@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -5,7 +6,9 @@ import plotly.graph_objects as go
 import joblib
 
 # Load Model + Data
-rf = joblib.load("sales_modell.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "sales_model.pkl")
+rf = joblib.load(model_path)
+
 data = pd.read_csv("supermarket_dataset.csv")
 data['Order_Date'] = pd.to_datetime(data['Order_Date'])
 
