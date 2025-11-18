@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import joblib
 
 # Load Model + Data
-rf = joblib.load("sales_model.pkl")
+rf = joblib.load("sales_modell.pkl")
 data = pd.read_csv("supermarket_dataset.csv")
 data['Order_Date'] = pd.to_datetime(data['Order_Date'])
 
