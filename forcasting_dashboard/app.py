@@ -10,15 +10,8 @@ model_path = os.path.join(os.path.dirname(__file__), "sales_model.pkl")
 rf = joblib.load(model_path)
 
 csv_path = os.path.join(os.path.dirname(__file__), "supermarket_dataset.csv")
- 
-# Check if file exists
-
-if not os.path.exists(csv_path):
-    st.error(f"CSV file not found at {csv_path}. Please upload it to the repo.")
-else:
-    data = pd.read_csv(csv_path)
-    st.success("CSV loaded successfully!")
-    st.write(data.head())
+data = pd.read_csv(csv_path)
+    
 data['Order_Date'] = pd.to_datetime(data['Order_Date'])
 
 st.title("📊 Demand Forecasting Dashboard (Random Forest)")
