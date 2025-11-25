@@ -1,0 +1,11 @@
+2025-11-25 15:37:08,419 - INFO - Pipeline run started 
+2025-11-25 15:37:08,483 - INFO - Loaded data\supermarket_dataset.csv
+2025-11-25 15:37:08,484 - INFO - Data shape: (5000, 15)
+2025-11-25 15:37:08,484 - INFO - Columns: ['Order_ID', 'Order_Date', 'Region', 'Country', 'Sales_Rep', 'Team', 'Customer_ID', 'Customer_Segment', 'Product_Category', 'Product_Name', 'Stage', 'Units_Sold', 'Revenue', 'Target', 'Deal_Size']
+2025-11-25 15:37:08,489 - INFO - Missing per column:
+{'Order_ID': 0, 'Order_Date': 0, 'Region': 0, 'Country': 0, 'Sales_Rep': 0, 'Team': 0, 'Customer_ID': 0, 'Customer_Segment': 0, 'Product_Category': 0, 'Product_Name': 0, 'Stage': 0, 'Units_Sold': 42, 'Revenue': 45, 'Target': 0, 'Deal_Size': 39}
+2025-11-25 15:37:08,496 - INFO - Dtypes: {'Order_ID': 'int64', 'Order_Date': 'object', 'Region': 'object', 'Country': 'object', 'Sales_Rep': 'object', 'Team': 'object', 'Customer_ID': 'object', 'Customer_Segment': 'object', 'Product_Category': 'object', 'Product_Name': 'object', 'Stage': 'object', 'Units_Sold': 'float64', 'Revenue': 'float64', 'Target': 'int64', 'Deal_Size': 'float64'}
+2025-11-25 15:37:08,514 - INFO - Column cardinalities (sample): {'Order_ID': 5000, 'Order_Date': 1419, 'Region': 4, 'Country': 8, 'Sales_Rep': 6, 'Team': 3, 'Customer_ID': 5000, 'Customer_Segment': 3, 'Product_Category': 3, 'Product_Name': 8, 'Stage': 3, 'Units_Sold': 11, 'Revenue': 1217, 'Target': 1953, 'Deal_Size': 1474}
+2025-11-25 15:37:08,515 - INFO - Detected problem: regression (target: Target)
+2025-11-25 15:40:01,591 - INFO - Saved NEW best model: models\model.pkl with metrics {'mse': 106654.76890040001, 'r2': 0.6678996379667684}
+2025-11-25 15:40:01,597 - INFO - Scheduler started. Daily run at 09:00
