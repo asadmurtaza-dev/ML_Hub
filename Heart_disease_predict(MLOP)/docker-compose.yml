@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./api
+    container_name: heart-api
+    ports:
+      - "8000:80"
+    restart: unless-stopped
+
+  ui:
+    build: ./ui
+    container_name: heart-ui
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: "http://api:80/predict"
+    depends_on:
+      - api
+    restart: unless-stopped
